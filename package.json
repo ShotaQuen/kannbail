@@ -1,7 +1,16 @@
 {
   "name": "kannbail",
-  "version": "2.0.0",
+  "version": "26.0.0",
   "description": "baileys whatsapp-api",
+  "keywords": [
+    "automation",
+    "whatsapp",
+    "baileys"
+  ],
+  "homepage": "https://github.com/Shota Quen/kannbail",
+  "repository": {
+    "url": "https://github.com/Shota Quen/kannbail"
+  },
   "license": "MIT",
   "author": "Ikann",
   "main": "lib/index.js",
