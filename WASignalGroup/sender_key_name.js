@@ -10,7 +10,7 @@ function intValue(num) {
 const MAX_VALUE = 0x7fffffff;
 const MIN_VALUE = -0x80000000;
 if (num > MAX_VALUE || num < MIN_VALUE) {
-
+// eslint-disable-next-line
 return (num &= 0xffffffff);
 }
 return num;

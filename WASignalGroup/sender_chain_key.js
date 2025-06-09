@@ -32,7 +32,6 @@ getDerivative(seed, key) {
 key = typeof key === 'string' ? Buffer.from(key, 'base64') : key;
 const hash = crypto.calculateMAC(key, seed);
 //const hash = new Hash().hmac_hash(key, seed, 'sha256', '');
-
 return hash;
 }
 }

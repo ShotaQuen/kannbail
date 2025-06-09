@@ -40,7 +40,6 @@ export declare const printQRIfNecessaryListener: (ev: BaileysEventEmitter, logge
 * utility that fetches latest baileys version from the master branch.
 * Use to ensure your WA connection is always on the latest version
 */
-
 export declare const fetchLatestBaileysVersion: (options?: AxiosRequestConfig<{}>) => Promise<{
 version: WAVersion
 isLatest: boolean
@@ -69,7 +68,6 @@ export declare const generateMdTagPrefix: () => string
 * Given a type of receipt, returns what the new status of the message should be
 * @param type type from receipt
 */
-
 export declare const getStatusFromReceiptType: (type: string | undefined) => proto.WebMessageInfo.Status
 /**
 * Stream errors generally provide a reason, map that to a baileys DisconnectReason

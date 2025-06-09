@@ -1,10 +1,8 @@
 const SenderKeyState = require('./sender_key_state');
 class SenderKeyRecord {
 MAX_STATES = 5;
-
 constructor(serialized) {
 this.senderKeyStates = [];
-
 if (serialized) {
 const list = serialized;
 for (let i = 0; i < list.length; i++) {
@@ -15,11 +13,9 @@ new SenderKeyState(null, null, null, null, null, null, structure)
 }
 }
 }
-
 isEmpty() {
 return this.senderKeyStates.length === 0;
 }
-
 getSenderKeyState(keyId) {
 if (!keyId && this.senderKeyStates.length) return this.senderKeyStates[this.senderKeyStates.length - 1];
 for (let i = 0; i < this.senderKeyStates.length; i++) {
@@ -29,19 +25,16 @@ return state;
 }
 }
 }
-
 addSenderKeyState(id, iteration, chainKey, signatureKey) {
 this.senderKeyStates.push(new SenderKeyState(id, iteration, chainKey, null, signatureKey));
 if (this.senderKeyStates.length > 5) {
 this.senderKeyStates.shift()
 }
 }
-
 setSenderKeyState(id, iteration, chainKey, keyPair) {
 this.senderKeyStates.length = 0;
 this.senderKeyStates.push(new SenderKeyState(id, iteration, chainKey, keyPair));
 }
-
 serialize() {
 const recordStructure = [];
 for (let i = 0; i < this.senderKeyStates.length; i++) {
@@ -51,5 +44,4 @@ recordStructure.push(senderKeyState.getStructure());
 return recordStructure;
 }
 }
-
 module.exports = SenderKeyRecord;

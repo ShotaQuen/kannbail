@@ -340,7 +340,7 @@ mediaType: MediaType
 newsletter?: boolean
 timeoutMs?: number
 }
-export type WAMediaUploadFunction = (readStream: Readable | Buffer, opts: WAMediaUploadFunctionOpts) => Promise<{
+export type WAMediaUploadFunction = (encFilePath: string | Buffer, opts: WAMediaUploadFunctionOpts) => Promise<{
 mediaUrl: string
 directPath: string
 handle?: string
